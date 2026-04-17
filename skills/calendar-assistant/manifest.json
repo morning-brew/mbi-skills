@@ -7,11 +7,14 @@
   "always_active": false,
   "triggers": [
     "calendar", "meeting", "schedule", "book", "booking", "reschedule",
-    "invite", "event", "availability", "free time", "busy",
+    "invite", "event", "availability", "available", "free", "busy", "open",
     "agenda", "today's meetings", "tomorrow's meetings",
     "holiday", "holidays", "pto", "time off", "vacation", "out of office",
     "ooo", "ooto", "taking off", "recurring",
-    "brewnions", "state of the brewnions", "all hands", "all-hands", "town hall"
+    "thanksgiving", "christmas", "new year", "labor day", "memorial day",
+    "independence day", "juneteenth", "presidents day", "mlk day",
+    "brewnions", "state of the brewnions", "all hands", "all-hands", "town hall",
+    "1:1", "1on1", "standup"
   ],
   "integrations": [
     {
