@@ -18,15 +18,15 @@
   ],
   "integrations": [
     {
-      "kind": "bundled-oauth-client",
-      "name": "google",
-      "client_file": "mdm:gws-client-secret.json",
+      "kind": "cli-auth-prereq",
+      "name": "google-calendar",
+      "binary": "gws",
       "scopes": [
         "https://www.googleapis.com/auth/calendar",
         "https://www.googleapis.com/auth/calendar.events",
         "https://www.googleapis.com/auth/admin.directory.user.readonly"
       ],
-      "keychain_key": "refresh_token"
+      "setup_prompt": "Sign in to Google Workspace (Calendar)"
     }
   ],
   "tools": {

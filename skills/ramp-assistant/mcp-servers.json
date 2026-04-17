@@ -1,0 +1,10 @@
+{
+  "servers": [
+    {
+      "id": "ramp",
+      "command": "npx",
+      "args": ["-y", "@ramp/mcp-ramp"],
+      "env": {}
+    }
+  ]
+}

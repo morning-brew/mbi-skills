@@ -8,9 +8,19 @@
       "version": "0.1.0",
       "author": "Morning Brew IT",
       "description": "Manages Google Calendar events at Morning Brew — books meetings, shows agendas, knows the company holiday calendar and recurring team rituals, routes PTO requests to BambooHR.",
-      "required_integrations": ["google"],
+      "required_integrations": ["google-calendar"],
       "required_binaries": ["gws"],
       "path": "skills/calendar-assistant"
+    },
+    {
+      "id": "ramp-assistant",
+      "name": "Ramp Assistant",
+      "version": "0.1.0",
+      "author": "Morning Brew IT",
+      "description": "Handles Morning Brew expenses on Ramp — finds receipts in your Gmail, forwards them to receipts@ramp.com, and answers expense-policy questions.",
+      "required_integrations": ["google-gmail", "ramp"],
+      "required_binaries": ["gws"],
+      "path": "skills/ramp-assistant"
     }
   ]
 }

@@ -1,0 +1,39 @@
+{
+  "default_project": "SD",
+  "default_issue_type": "[System] Service request",
+  "rules": [
+    {
+      "match": "receipt_forwarded_but_unmatched_48h",
+      "description": "User forwarded a receipt to receipts@ramp.com more than 48 hours ago and it still shows as unmatched on their Ramp transaction.",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request",
+      "summary": "Unmatched receipt on Ramp — {transaction_id}",
+      "cc": ["finance"]
+    },
+    {
+      "match": "out_of_policy_dispute",
+      "description": "User's charge was flagged by Ramp as out-of-policy and they want to dispute it.",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request with approvals",
+      "summary": "Ramp policy dispute from {user}",
+      "cc": ["finance"]
+    },
+    {
+      "match": "new_vendor_approval",
+      "description": "User wants to onboard a new vendor above the auto-approved threshold.",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request with approvals",
+      "summary": "New vendor request — {vendor_name}",
+      "cc": ["finance", "procurement"]
+    },
+    {
+      "match": "policy_question_not_in_notion",
+      "description": "User asks an expense-policy question not answered by the in-app Ramp policy or the Notion handbook.",
+      "escalate": false,
+      "redirect": "Slack #finance-help. Only escalate to SD if they get no response within a business day."
+    }
+  ]
+}

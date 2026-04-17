@@ -1,0 +1,44 @@
+{
+  "id": "ramp-assistant",
+  "name": "Ramp Assistant",
+  "version": "0.1.0",
+  "description": "Handles Morning Brew expenses on Ramp — finds receipts in your Gmail, forwards them to receipts@ramp.com, and answers expense-policy questions.",
+  "author": "Morning Brew IT",
+  "always_active": false,
+  "triggers": [
+    "expense", "expenses", "receipt", "receipts",
+    "ramp", "reimbursement", "reimburse",
+    "submit expense", "process receipts", "log expense",
+    "card charge", "charge", "purchase",
+    "policy", "spending policy", "travel policy",
+    "vendor", "vendor approval", "new vendor",
+    "budget", "per diem"
+  ],
+  "integrations": [
+    {
+      "kind": "cli-auth-prereq",
+      "name": "google-gmail",
+      "binary": "gws",
+      "scopes": [
+        "https://www.googleapis.com/auth/gmail.modify",
+        "https://www.googleapis.com/auth/gmail.send"
+      ],
+      "setup_prompt": "Sign in to Google Workspace (Gmail)"
+    },
+    {
+      "kind": "mcp-oauth",
+      "name": "ramp",
+      "mcp_server_id": "ramp",
+      "setup_prompt": "Connect your Ramp account"
+    }
+  ],
+  "tools": {
+    "required_binaries": ["gws"]
+  },
+  "files": {
+    "prompt": "skill.md",
+    "mcp_servers": "mcp-servers.json",
+    "knowledge_routes": "knowledge-routes",
+    "escalation": "escalation.json"
+  }
+}
