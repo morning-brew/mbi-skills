@@ -21,6 +21,16 @@
       "required_integrations": ["google-gmail", "ramp"],
       "required_binaries": ["gws"],
       "path": "skills/ramp-assistant"
+    },
+    {
+      "id": "memory-assistant",
+      "name": "Memory",
+      "version": "0.1.0",
+      "author": "Morning Brew IT",
+      "description": "Persistent memory across chats — notices people, projects, and preferences you mention, stashes them as markdown, and looks them up before answering.",
+      "required_integrations": [],
+      "required_binaries": [],
+      "path": "skills/memory-assistant"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "id": "memory-assistant",
+  "name": "Memory",
+  "version": "0.1.0",
+  "description": "Persistent memory across chats — notices people, projects, and preferences you mention, stashes them as markdown, and looks them up before answering.",
+  "author": "Morning Brew IT",
+  "always_active": true,
+  "triggers": [],
+  "integrations": [],
+  "tools": {
+    "required_binaries": []
+  },
+  "files": {
+    "prompt": "skill.md",
+    "knowledge_routes": "knowledge-routes"
+  }
+}
