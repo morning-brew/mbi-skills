@@ -1,0 +1,37 @@
+{
+  "id": "calendar-assistant",
+  "name": "Calendar Assistant",
+  "version": "0.1.0",
+  "description": "Manages Google Calendar events at Morning Brew — books meetings, shows agendas, knows the company holiday calendar and recurring team rituals, routes PTO requests to BambooHR.",
+  "author": "Morning Brew IT",
+  "always_active": false,
+  "triggers": [
+    "calendar", "meeting", "schedule", "book", "booking", "reschedule",
+    "invite", "event", "availability", "free time", "busy",
+    "agenda", "today's meetings", "tomorrow's meetings",
+    "holiday", "holidays", "pto", "time off", "vacation", "out of office",
+    "ooo", "ooto", "taking off", "recurring",
+    "brewnions", "state of the brewnions", "all hands", "all-hands", "town hall"
+  ],
+  "integrations": [
+    {
+      "kind": "bundled-oauth-client",
+      "name": "google",
+      "client_file": "mdm:gws-client-secret.json",
+      "scopes": [
+        "https://www.googleapis.com/auth/calendar",
+        "https://www.googleapis.com/auth/calendar.events",
+        "https://www.googleapis.com/auth/admin.directory.user.readonly"
+      ],
+      "keychain_key": "refresh_token"
+    }
+  ],
+  "tools": {
+    "required_binaries": ["gws"]
+  },
+  "files": {
+    "prompt": "skill.md",
+    "knowledge_routes": "knowledge-routes",
+    "escalation": "escalation.json"
+  }
+}

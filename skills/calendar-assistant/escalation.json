@@ -1,0 +1,36 @@
+{
+  "default_project": "SD",
+  "default_issue_type": "[System] Service request",
+  "rules": [
+    {
+      "match": "pto_policy_question",
+      "description": "User asks about PTO policy specifics we can't answer from the knowledge routes (accrual, blackouts, rollover, sick leave rules, etc.)",
+      "escalate": false,
+      "redirect": "BambooHR (bamboohr.com) + Notion People handbook. Only escalate to SD if the redirect is wrong or they're genuinely stuck."
+    },
+    {
+      "match": "holiday_policy_change",
+      "description": "User wants to change or dispute the company holiday calendar",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request",
+      "summary": "Holiday calendar change request from {user}"
+    },
+    {
+      "match": "recurring_meeting_governance",
+      "description": "User asks to cancel, reschedule, or materially modify a company-wide recurring meeting (Brewnions, all-hands, etc.)",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request with approvals",
+      "summary": "Company-wide meeting change request"
+    },
+    {
+      "match": "calendar_auth_failure",
+      "description": "gws CLI auth is broken and the user has already tried `gws auth login` unsuccessfully",
+      "escalate": true,
+      "project": "SD",
+      "issue_type": "[System] Service request",
+      "summary": "gws-cli Google Workspace auth failure"
+    }
+  ]
+}
